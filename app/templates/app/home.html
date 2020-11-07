@@ -1,0 +1,12 @@
+{% extends 'app/base.html' %}
+{% load embed_video_tags %}
+{% block content %}
+<div class="container">
+    {% for i in videos %}
+    <h1>{{i.name}}</h1>
+    {% video i.video 'small' %}
+    <p>{{i.description}}</p>
+    {% endfor %}
+</div>
+
+{% endblock %}
